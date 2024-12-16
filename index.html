@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Traffic - Giao Thông Xanh</title>
+    <link href="https://cdn.discordapp.com/attachments/983018686598225940/1318272370716315738/Layer_4.png?ex=6761b851&is=676066d1&hm=d916fb64327c1487adf141c77f9d5abab98042a3f64e211fb5590cdbca43d578&" rel="icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="https://cdn.discordapp.com/attachments/983018686598225940/1318272370716315738/Layer_4.png?ex=6761b851&is=676066d1&hm=d916fb64327c1487adf141c77f9d5abab98042a3f64e211fb5590cdbca43d578&" alt=""><p>Green Traffic</p></div>
+        <ul>
+            <li><a href="#benefit">Lợi ích</a></li>
+            <li><a href="#feature">Tính năng</a></li>
+            <li><a href="#footer">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <header>
+        <video src="https://cdn.discordapp.com/attachments/983018686598225940/1318241651889672234/1216_1.mp4?ex=67619bb5&is=67604a35&hm=8cdb3fa0a2eb9ab4a2b52ab9fa8d9e26aa0db3b5f6aed1bfe2af252e1b3d70a7&" loop autoplay></video>
+        <h1>GREEN TRAFFIC</h1>
+        <p>NỀN TẢNG GIAO THÔNG XANH DÀNH CHO SINH VIÊN</p>
+        <a href="#" class="cta-btn">Xem video</a>
+    </header>
+
+    <section id="benefit" class="benefit-section">
+        <h2>LỢI ÍCH CỦA GREEN TRAFFIC</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="https://img.icons8.com/ios/50/28a745/info.png" alt="Info">
+                <p>Tiết kiệm chi phí di chuyển cho sinh viên</p>
+            </div>
+            <div class="benefit">
+                <img src="https://img.icons8.com/ios/50/28a745/traffic-jam.png" alt="Traffic">
+                <p>Giảm thiểu khí thải CO2 góp phần bảo vệ môi trường</p>
+            </div>
+            <div class="benefit">
+                <img src="https://img.icons8.com/ios/50/28a745/car.png" alt="Efficiency">
+                <p>Thúc đẩy ý thức giao thông xanh trong cộng đồng</p>
+            </div>
+            <div class="benefit">
+                <img src="https://img.icons8.com/?size=100&id=59049&format=png&color=28a745" alt="Economy">
+                <p>Kích thích phát triển kinh tế bền vững</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" class="feature-section">
+        <h2>CÁC TÍNH NĂNG NỔI BẬT</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="https://img.icons8.com/ios/50/28a745/ai.png" alt="AI">
+                <h3>Xe máy điện thông minh</h3>
+                <p>Cải thiện di chuyển nhờ tích hợp AI và công nghệ cảm biến.</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios/50/28a745/sensor.png" alt="Sensor">
+                <h3>Trạm sạc tích hợp</h3>
+                <p>Dễ tìm kiếm và quản lý trạm sạc ngay trong ký túc xá hoặc khu học đường.</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios/50/28a745/dashboard.png" alt="Dashboard">
+                <h3>Ứng dụng di động</h3>
+                <p>Quản lý chuyến đi, thanh toán, và tích điểm dễ dàng.</p>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/ios/50/28a745/network.png" alt="Network">
+                <h3>Hệ thống kết nối</h3>
+                <p>Kết nối sinh viên với các tiện ích giao thông xanh xung quanh.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer">
+        <img src="https://cdn.discordapp.com/attachments/983018686598225940/1317933052814688266/GreenTraffic-Photoroom.png?ex=6761250d&is=675fd38d&hm=ce06b8725629db324dafe17980966da7adb8bc59046b5ae70509571973e7eda3&" alt="Logo Green Traffic">
+        <div class="contact">
+            <p><strong>Địa chỉ:</strong> TP. Đà Nẵng</p>
+            <p><strong>Email:</strong> contact.greentraffic@email.com</p>
+            <p><strong>Hotline:</strong> ...</p>
+        </div>
+    </footer>
+    <div class="popup" id="videoPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <iframe src="https://www.youtube.com/embed/DbN6fzquu-Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script>
+        // JavaScript để xử lý sự kiện click
+        const ctaBtn = document.querySelector('.cta-btn');
+        const videoPopup = document.getElementById('videoPopup');
+        const closePopup = document.getElementById('closePopup');
+
+        ctaBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+            videoPopup.style.display = 'flex'; // Hiển thị popup
+        });
+
+        closePopup.addEventListener('click', function() {
+            videoPopup.style.display = 'none'; // Ẩn popup
+        });
+
+        // Đóng popup khi nhấp ra ngoài nội dung popup
+        window.addEventListener('click', function(event) {
+            if (event.target === videoPopup) {
+                videoPopup.style.display = 'none'; // Ẩn popup
+            }
+        });
+    </script>
+</body>
+</html>
